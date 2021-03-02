@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:tezbazar_demo/ui/constants.dart';
+import 'package:tezbazar_demo/ui/profile/components/user_info_edit.dart';
 
 class ProfileNameImage extends StatelessWidget {
   final Size size;
 
   const ProfileNameImage({Key key, this.size}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -28,10 +30,18 @@ class ProfileNameImage extends StatelessWidget {
                   ),
                 ),
                 Spacer(flex: 5),
-                Icon(
-                  Icons.edit,
-                  color: Colors.white,
-                ),
+                IconButton(
+                  icon: Icon(
+                    Icons.edit,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => UserInfoEdit()),
+                    );
+                  },
+                )
               ],
             ),
           ),

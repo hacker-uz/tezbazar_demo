@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tezbazar_demo/ui/profile/components/address.dart';
 import 'package:tezbazar_demo/ui/profile/components/card_comp.dart';
 import 'package:tezbazar_demo/ui/profile/components/helping_list.dart';
 import 'package:tezbazar_demo/ui/profile/components/profile_name_image.dart';
@@ -24,6 +25,14 @@ class ProfileScreen extends StatelessWidget {
                         CardComp(
                           imageUrl: "assets/images/adress_image.png",
                           title: "Адрес",
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (contex) => AddressScreen(),
+                              ),
+                            );
+                          },
                         ),
                         SizedBox(width: 10),
                         CardComp(
