@@ -3,8 +3,22 @@ import 'package:tezbazar_demo/ui/profile/components/address.dart';
 import 'package:tezbazar_demo/ui/profile/components/card_comp.dart';
 import 'package:tezbazar_demo/ui/profile/components/helping_list.dart';
 import 'package:tezbazar_demo/ui/profile/components/profile_name_image.dart';
+import 'package:tezbazar_demo/ui/profile/components/bottomNavigator.dart';
+import 'package:tezbazar_demo/ui/profile/oplata.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
+  @override
+  _ProfileScreenState createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
+  List<Widget> _list = [
+    Oplata(),
+    Container(color: Colors.green,),
+    Container(color: Colors.yellow,),
+    Container(color: Colors.blue,),
+    Container(color: Colors.pink,),
+  ];
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -74,7 +88,9 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
         ),
+        // child: _list[_current],
       ),
+      bottomNavigationBar: MyBottomNavigationBar(),
     );
   }
 }

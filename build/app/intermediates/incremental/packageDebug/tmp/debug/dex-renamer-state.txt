@@ -1,0 +1,4 @@
+#Thu Mar 18 10:13:39 UZT 2021
+base.0=D\:\\flutters\\New folder\\tezbozar\\tezbazar_demo\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
