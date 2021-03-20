@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tezbazar_demo/ui/constants.dart';
+import 'package:tezbazar_demo/constants.dart';
 import 'package:tezbazar_demo/ui/profile/components/user_info_edit.dart';
 
 class ProfileNameImage extends StatelessWidget {

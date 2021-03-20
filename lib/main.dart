@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tezbazar_demo/ui/profile/profile_screen.dart';
+import 'package:tezbazar_demo/bottom_nav_bar.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ProfileScreen(),
+      home: BottomNavBar(),
     );
   }
 }
