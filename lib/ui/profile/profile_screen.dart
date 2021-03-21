@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tezbazar_demo/ui/balance/balance_screen.dart';
 import 'package:tezbazar_demo/ui/profile/components/address.dart';
 import 'package:tezbazar_demo/ui/profile/components/card_comp.dart';
 import 'package:tezbazar_demo/ui/profile/components/helping_list.dart';
@@ -38,6 +39,14 @@ class ProfileScreen extends StatelessWidget {
                         CardComp(
                           imageUrl: "assets/images/payment_image.png",
                           title: "150 000 сум",
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (contex) => BalanceScreen(),
+                              ),
+                            );
+                          },
                         ),
                         SizedBox(width: 10),
                         CardComp(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import '../../constants.dart';
+import '../../../constants.dart';
 
 class UserInfoEdit extends StatefulWidget {
   @override

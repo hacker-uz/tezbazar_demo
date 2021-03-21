@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tezbazar_demo/ui/constants.dart';
+import 'package:tezbazar_demo/constants.dart';
 
 class AddressScreen extends StatefulWidget {
   @override
