@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:tezbazar_demo/constants.dart';
+import 'package:tezbazar_demo/ui/profile/others/about.dart';
+import 'package:tezbazar_demo/ui/profile/others/oplata.dart';
+import 'package:tezbazar_demo/ui/profile/others/question.dart';
+import 'package:tezbazar_demo/ui/profile/others/zakaz.dart';
 
-class HelpingList extends StatelessWidget {
+class HelpingList extends StatefulWidget {
+  @override
+  _HelpingListState createState() => _HelpingListState();
+}
+
+class _HelpingListState extends State<HelpingList> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -9,25 +18,25 @@ class HelpingList extends StatelessWidget {
         buildCard(
           title: "Способы доставки и оплаты",
           onTap: () {
-            print("Способы доставки и оплаты");
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Oplata()));
           },
         ),
         buildCard(
           title: "Как оформить заказ",
           onTap: () {
-            print("Как оформить заказ");
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Zakaz()));
           },
         ),
         buildCard(
           title: "Задать вопрос",
           onTap: () {
-            print("Задать вопрос");
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Question()));
           },
         ),
         buildCard(
           title: "О компании",
           onTap: () {
-            print("О компании");
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>About()));
           },
         ),
       ],
