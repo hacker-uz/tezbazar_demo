@@ -63,7 +63,7 @@ class BalanceScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (contex) => PaymentCardInfo(),
+                  builder: (context) => PaymentCardInfo(),
                 ),
               );
             },

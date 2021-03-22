@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tezbazar_demo/constants.dart';
+import 'package:tezbazar_demo/ui/balance/balance_sms_verify.dart';
 import 'package:tezbazar_demo/ui/balance/components/payment_type.dart';
 
 class PaymentCardInfo extends StatelessWidget {
@@ -92,20 +93,30 @@ class PaymentCardInfo extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 24),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 38, vertical: 12),
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: kPrimaryColor,
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Text(
-                      "Продолжить",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
+                  GestureDetector(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 38, vertical: 12),
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: kPrimaryColor,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Text(
+                        "Продолжить",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ),
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context)=>BalanceSmsVerify(),
+                          )
+                      );
+                    }
                   ),
                   SizedBox(height: 14)
                 ],
