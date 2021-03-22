@@ -30,7 +30,7 @@ class ProfileScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (contex) => AddressScreen(),
+                                builder: (context) => AddressScreen(),
                               ),
                             );
                           },
@@ -43,7 +43,7 @@ class ProfileScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (contex) => BalanceScreen(),
+                                builder: (context) => BalanceScreen(),
                               ),
                             );
                           },
