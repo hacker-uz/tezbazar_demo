@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:tezbazar_demo/ui/balance/balance_sms_verify_message.dart';
 import '../../constants.dart';
 
 class BalanceSmsVerify extends StatelessWidget {
@@ -45,20 +45,25 @@ class BalanceSmsVerify extends StatelessWidget {
                 ),
               ),
               // SizedBox(height: 10,),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 38, vertical: 12),
-                height: 40,
-                decoration: BoxDecoration(
-                  color: kPrimaryColor,
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Text(
-                  "Продолжить",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
+              GestureDetector(
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 38, vertical: 12),
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: kPrimaryColor,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Text(
+                    "Продолжить",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
+                onTap: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context) => BlanceSmsVerifyMessage()));
+                },
               ),
             ],
           ),
