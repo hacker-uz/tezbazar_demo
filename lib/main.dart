@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:tezbazar_demo/bottom_nav_bar.dart';
+import 'package:tezbazar_demo/providers/FavouriteProvider.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +18,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: BottomNavBar(),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => FavouriteProvider()),
+        ],
+          child: BottomNavBar()
+      ),
     );
   }
 }

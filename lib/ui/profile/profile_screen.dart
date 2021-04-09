@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tezbazar_demo/ui/balance/balance_screen.dart';
+import 'package:tezbazar_demo/ui/favourites/favourite_screen.dart';
 import 'package:tezbazar_demo/ui/orders/orders_screen.dart';
 import 'package:tezbazar_demo/ui/profile/components/address.dart';
 import 'package:tezbazar_demo/ui/profile/components/card_comp.dart';
@@ -76,6 +77,13 @@ class ProfileScreen extends StatelessWidget {
                         CardComp(
                           imageUrl: "assets/images/favorite_image.png",
                           title: "Избранное",
+                          onTap: (){
+                            Navigator.push(context,
+                                MaterialPageRoute(
+                                    builder: (context) => FavouriteScreen()
+                                )
+                            );
+                          },
                         ),
                         SizedBox(width: 10),
                         CardComp(
